@@ -1,4 +1,4 @@
-import tableReducer, {decrement, increment, incrementByAmount, TableState,} from './tableSlice';
+import tableReducer, {incrementByAmount, TableState,} from './tableSlice';
 
 describe('table reducer', () => {
     const initialState: TableState = {
@@ -10,16 +10,6 @@ describe('table reducer', () => {
             value: 0,
             status: 'idle',
         });
-    });
-
-    it('should handle increment', () => {
-        const actual = tableReducer(initialState, increment());
-        expect(actual.value).toEqual(4);
-    });
-
-    it('should handle decrement', () => {
-        const actual = tableReducer(initialState, decrement());
-        expect(actual.value).toEqual(2);
     });
 
     it('should handle incrementByAmount', () => {
