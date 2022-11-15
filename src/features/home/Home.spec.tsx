@@ -1,6 +1,6 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {Table} from './Table';
+import {Home} from './Home';
 import {Provider} from "react-redux";
 import {store} from "../../app/store";
 
@@ -8,7 +8,7 @@ describe('Table', () => {
 
     it('renders Table component', () => {
         render(<Provider store={store}>
-            <Table/>
+            <Home/>
         </Provider>);
         expect(screen.getByText('Result : 0')).toBeInTheDocument();
     });
