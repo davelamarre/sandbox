@@ -58,6 +58,17 @@ export function sortByDate(array: any[], key: string, order: string) {
     })
 }
 
+// find the frequency of an element in array
+export function findFrequencyOfElementInArray(array: any[], item: any) {
+    return array.filter((v) => (v === item)).length;
+}
+
+// propery an element from an object passed as param
+export function removePropertyFromObject(object: any, property: string) {
+    delete object[property];
+    return object;
+}
+
 
 
 

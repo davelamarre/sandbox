@@ -1,10 +1,12 @@
 import {
     addToArraySpecificPosition,
     filterArrayByKeyAndValue,
+    findFrequencyOfElementInArray,
     findIndexPosition,
     findItemInArray,
     flattenArray,
     removeItemFromArrayByElement,
+    removePropertyFromObject,
     sortArray,
     sortByDate
 } from './sort-array';
@@ -113,5 +115,19 @@ describe('sortByDate', () => {
 
 });
 
+describe('findFrequencyOfElementInArray', () => {
+    it('should find the frequency of an element in an array', () => {
+        const array = ['milk', 'bread', 'sugar', 'milk', 'milk'];
+        const item = 'milk';
+        const frequency = findFrequencyOfElementInArray(array, item);
+        expect(frequency).toEqual(3);
+    });
+});
 
-
+describe('removePropertyFromObject', () => {
+    it('should remove a property from an object', () => {
+        const object = {name: 'Jason', age: 30, species: 'rabbit'};
+        const newObject = removePropertyFromObject(object, 'species');
+        expect(newObject).toEqual({name: 'Jason', age: 30});
+    });
+});
